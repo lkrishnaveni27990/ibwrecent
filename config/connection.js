@@ -2,9 +2,12 @@ const MongoClient = require('mongodb').MongoClient
 const state ={
     db:null
 }
+
+
+
 module.exports.connect= function(done){
     const url ='mongodb://localhost:27017'
-    const dbname='shopping'
+    const dbname='ibathworld'
 
     MongoClient.connect(url,(err,data)=>{
         if(err)
@@ -13,6 +16,10 @@ module.exports.connect= function(done){
         done()
     })
 }
+
+
+
+
 module.exports.get= function(){
     return state.db
 }

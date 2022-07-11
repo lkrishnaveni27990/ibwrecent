@@ -10,8 +10,6 @@ var app = express();
 var fileUpload=require('express-fileupload')
 var db = require('./config/connection');
 var session=require('express-session')
-const { networkInterfaces } = require('os');
-const { done } = require('express-hbs/lib/resolver');
 //import {Printer, Label} from 'godex-printer';
 
 

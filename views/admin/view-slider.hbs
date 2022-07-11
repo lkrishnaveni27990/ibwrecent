@@ -1,0 +1,37 @@
+<section>
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <a href="/admin/add-slider" class="btn btn-success ml-auto">Add Slider</a>
+    </div>
+<table class="table mt-5 " id="sliderTable">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Image</th>
+        <th scope="col">Description1</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each sliders}}
+    <tr>
+      <th scope="row">1</th>
+      <td><img style="width:50px;height:50px"src="../slider-images/{{this._id}}.jpg"/></td>
+      <td>{{this.Description1}}</td>
+      <td>
+      <a href="/admin/edit-slider/{{this._id}}" class="btn btn-primary">Edit</a>
+
+        <a href="/admin/delete-slider/{{this._id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete the item {{this.Name}}?')">Delete</a>
+
+      </td>
+    </tr>
+    {{/each}}
+   </tbody>
+</table>
+</div>
+</section>
+<script>
+  $(function (){
+    $('#sliderTable').DataTable();
+  });
+</script>

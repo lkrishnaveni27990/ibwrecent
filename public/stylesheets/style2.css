@@ -1,0 +1,39 @@
+
+
+section video
+{
+	width:100%;
+	height: 30rem;
+	object-fit: cover;
+	
+}
+section .navigation{
+	padding: 1px;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 150px;
+
+}
+
+section .navigation li{
+	list-style: none;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 1px;
+	border: 1px solid #fff;
+	opacity: 50;
+}
+
+section .navigation li video{
+	transition: 0.5s;
+}
+section .navigation li video:hover{
+	height: 150px;
+	width: 200px;
+	border: 2px solid #fff;
+}

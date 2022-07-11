@@ -1,0 +1,45 @@
+
+	<!--- Meet the brand -->
+
+	<section>
+		<div class="container">
+
+			<div class="container-fluid padding">
+				<div class="row welcome text-center">
+					<div class="col-12">
+						<h4 class="display-4">Meet the Brands</h4>
+					</div>
+				</div>
+			</div>
+
+			<!---cards-->
+
+			<div class="container-fluid padding ml-5" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
+				data-aos-duration="1000">
+				<div class="row text-center padding pt-5 pb-5 ml-5">
+                    {{#each brands}}
+					<div class="card col-xs-12 col-sm-5 col-md-3  bg-light animate__animated animate__fadeInLeft animate__slow"
+						style="align-items: center;width:15rem;height:20rem;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						<br>
+						<img class="card-img-top" src="/brand-images/{{this._id}}.jpg" style="width:8rem;height:10rem;">
+						<div class="card-body">
+							<h4 class="card-title">{{this.Name}}</h4>
+							<p class="card-text">{{this.Description}}</p>
+							</p>
+							<a href="#" class="btn btn-outline-secondary">See Profile</a>
+						</div>
+					</div>
+					<div class="col-md-1"></div>
+                    {{/each}}
+
+				
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<br>
+	<!--- End of brand -->
+

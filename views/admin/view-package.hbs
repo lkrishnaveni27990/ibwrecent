@@ -1,0 +1,35 @@
+<section>
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <a href="/admin/add-package" class="btn btn-success ml-auto">Add Package</a>
+    </div>
+<table class="table mt-5 " id="packageTable">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Image</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each packages}}
+    <tr>
+      <th scope="row">1</th>
+      <td><img style="width:50px;height:50px"src="/package-images/{{this._id}}.jpg"/></td>
+      <td>
+      <a href="/admin/edit-package/{{this._id}}" class="btn btn-primary">Edit</a>
+
+        <a href="/admin/delete-package/{{this._id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete the item {{this.Name}}?')">Delete</a>
+
+      </td>
+    </tr>
+    {{/each}}
+   </tbody>
+</table>
+</div>
+</section>
+<script>
+  $(function (){
+    $('#packageTable').DataTable();
+  });
+</script>

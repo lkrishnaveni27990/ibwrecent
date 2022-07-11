@@ -1,0 +1,41 @@
+<section>
+<div class="container">
+    <div class="row mt-4 mb-4">
+        <a href="/admin/add-banner" class="btn btn-success ml-auto">Add Banner</a>
+    </div>
+<table class="table mt-5 " id="bannerTable">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th>Image</th>
+       <th scope="col">Description1</th>
+        <th scope="col">Description2</th>
+      <th>Option</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each banners}}
+    <tr>
+      <th scope="row">1</th>
+       
+      <td><img style="width:50px;height:50px"src="../banner-images/{{this._id}}.jpg"/></td>
+
+      <td>{{this.Description1}}</td>
+        <td>{{this.Description2}}</td>
+      <td>
+      <a href="/admin/edit-banner/{{this._id}}" class="btn btn-primary">Edit</a>
+
+        <a href="/admin/delete-banner/{{this._id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete the item {{this.Name}}?')">Delete</a>
+
+      </td>
+    </tr>
+    {{/each}}
+   </tbody>
+</table>
+</div>
+</section>
+<script>
+  $(function (){
+    $('#bannerTable').DataTable();
+  });
+</script>

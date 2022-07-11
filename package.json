@@ -20,5 +20,18 @@
     "morgan": "~1.9.1",
     "pdfkit": "^0.13.0",
     "razorpay": "^2.8.1"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkrishnaveni27990/ecommerceapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lkrishnaveni27990/ecommerceapp/issues"
+  },
+  "homepage": "https://github.com/lkrishnaveni27990/ecommerceapp#readme",
+  "description": ""
 }

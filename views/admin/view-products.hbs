@@ -24,7 +24,6 @@
       <td><img style="width:50px;height:50px"src="/product-images/{{this._id}}.jpg"/></td>
       <td>
       <a href="/admin/edit-product/{{this._id}}" class="btn btn-primary">Edit</a>
-        <a href="/admin/label-print/{{this._id}}" class="btn btn-info">label print</a>
 
         <a href="/admin/delete-product/{{this._id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete the item {{this.Name}}?')">Delete</a>
 
@@ -40,3 +39,7 @@
     $('#productsTable').DataTable();
   });
 </script>
+
+
+
+
